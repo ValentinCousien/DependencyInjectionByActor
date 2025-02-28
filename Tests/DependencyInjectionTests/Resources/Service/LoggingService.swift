@@ -22,7 +22,7 @@ struct ConsoleLogger: LoggingService {
 }
 
 // 3. Define an injection key
-struct LoggingServiceKey: InjectionKey {
+struct LoggingServiceKey: SendableInjectionKey {
     public typealias Value = any LoggingService
     
     public static var defaultValue: any LoggingService {
